@@ -273,4 +273,21 @@ items.forEach(item => observer.observe(item));
 // CONSOLE
 // -----------------------------
 
-console.log("LAXMAN PARIYAR • Portfolio 2026");
+const slides = document.querySelectorAll(".logo-image");
+
+let current = 0;
+
+setInterval(() => {
+
+    const next = (current + 1) % slides.length;
+
+    // Fade the next image in
+    slides[next].classList.add("active");
+
+    // Wait until the fade finishes, then hide the previous one
+    setTimeout(() => {
+        slides[current].classList.remove("active");
+        current = next;
+    }, 2000); // Must match CSS transition time
+
+}, 3_000);
