@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 /* ==========================================
 LAXMAN PARIYAR PORTFOLIO 2026
-Premium Dark + Light Theme
 ========================================== */
 
 :root {
@@ -548,13 +547,7 @@ footer {
     transition:opacity 2s ease-in-out;
 }
 
-.featured-image{
-    position: relative;
-    width: 520px;
-    height: 520px;
-    overflow: hidden;
-    margin: 0 auto;
-}
+
 
 .logo-image{
     position: absolute;
@@ -614,4 +607,78 @@ footer {
 html, body {
     overflow-x: hidden;
     max-width: 100%;
+}
+.featured-image {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+/* ===========================
+   MOBILE NAVIGATION
+=========================== */
+
+.menu-toggle {
+    display: none;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    background: var(--surface);
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--card);
+        border-top: 1px solid var(--border);
+        z-index: 1000;
+    }
+
+    nav.mobile-open {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .header .container {
+        position: relative;
+    }
 }
