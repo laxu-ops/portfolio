@@ -624,61 +624,52 @@ html, body {
    MOBILE NAVIGATION
 =========================== */
 
-.menu-toggle {
-    display: none;
-    background: var(--card);
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: var(--transition);
-}
 
-.menu-toggle:hover {
-    background: var(--surface);
-}
+
+
+
 
 @media (max-width: 768px) {
 
     .menu-toggle {
-        display: block;
+        display: none;
+        background: var(--card);
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .header .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .header-actions {
+        margin-right: 12px;
     }
 
     nav {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 100%;
         left: 0;
         width: 100%;
         background: var(--card);
-        border-top: 1px solid var(--border);
-        z-index: 1000;
     }
 
     nav.mobile-open {
         display: block;
     }
 
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        padding: 1rem;
-    }
-
-    nav li {
-        width: 100%;
-    }
-
-    nav a {
-        display: block;
-        padding: 1rem;
-        border-bottom: 1px solid var(--border);
-    }
-
-    .header .container {
-        position: relative;
+    .menu-toggle:hover {
+        background: var(--surface);
     }
 }

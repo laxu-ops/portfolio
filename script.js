@@ -238,7 +238,7 @@ if (window.innerWidth <= 768 && nav && header) {
     toggle.classList.add("menu-toggle");
     toggle.innerHTML = "☰";
 
-    header.insertBefore(toggle, nav);
+    header.appendChild(toggle);
 
     toggle.addEventListener("click", () => {
         nav.classList.toggle("mobile-open");
