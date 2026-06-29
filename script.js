@@ -232,13 +232,13 @@ backToTopBtn.addEventListener("click", () => {
 const nav = document.querySelector("nav");
 const header = document.querySelector(".header .container");
 
-if (window.innerWidth <= 768 && nav && header) {
+if (nav && header) {
     const toggle = document.createElement("button");
 
     toggle.classList.add("menu-toggle");
     toggle.innerHTML = "☰";
 
-    header.insertBefore(toggle,nav);
+    header.insertBefore(toggle, nav);
 
     toggle.addEventListener("click", () => {
         nav.classList.toggle("mobile-open");
