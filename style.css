@@ -611,3 +611,7 @@ footer {
 .project-image:hover img {
     transform: scale(1.1);
 }
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
