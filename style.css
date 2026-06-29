@@ -550,9 +550,10 @@ footer {
 
 .featured-image{
     position: relative;
-    width: 420px;
-    height: 420px;
+    width: 520px;
+    height: 520px;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .logo-image{
